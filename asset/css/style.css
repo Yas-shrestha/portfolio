@@ -29,11 +29,15 @@
 #blob2 {
   visibility: hidden;
 }
+#blob4 {
+  visibility: hidden;
+}
 .hero-section .hero-description {
   font-size: 1.5rem;
   /* color: #000000; */
   margin-top: 20px;
   /* animation: colorChange 3s ease forwards; */
+  text-align: justify;
 }
 .social-icon {
   padding: 8px;
@@ -41,7 +45,30 @@
   font-size: 1.5rem;
   display: inline-block;
 }
+/* about section */
 
+.about-image {
+  position: relative;
+}
+.about-title {
+  color: #f2a738;
+}
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  position: absolute;
+  left: 0;
+  top: -1rem;
+}
+.about-section .about-description {
+  font-size: 1.5rem;
+  /* color: #000000; */
+  margin-top: 20px;
+  /* animation: colorChange 3s ease forwards; */
+  text-align: justify;
+}
 @keyframes typing {
   from {
     width: 0;
