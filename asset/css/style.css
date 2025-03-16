@@ -25,13 +25,15 @@
   left: 0;
   top: -20px;
 }
-
+/* animated svg */
 #blob2 {
   visibility: hidden;
 }
 #blob4 {
   visibility: hidden;
 }
+
+/* animated svg */
 .hero-section .hero-description {
   font-size: 1.5rem;
   /* color: #000000; */
@@ -46,7 +48,27 @@
   display: inline-block;
 }
 /* about section */
+.about-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
 
+.svg-background {
+  position: absolute;
+  top: 3.2rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Sends the SVG to the background */
+}
+
+.svg-background svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
 .about-image {
   position: relative;
 }
@@ -68,6 +90,13 @@
   margin-top: 20px;
   /* animation: colorChange 3s ease forwards; */
   text-align: justify;
+}
+/* .wave-svg {
+  position: absolute;
+} */
+/* sercices section */
+.services-section {
+  background-color: #29a4d8;
 }
 @keyframes typing {
   from {
