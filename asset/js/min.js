@@ -12,3 +12,10 @@ const second = KUTE.fromTo(
   { repeat: 999, duration: 2000, yoyo: true }
 );
 second.start();
+// const wave = KUTE.fromTo(
+//   "#wave1",
+//   { path: "#wave1" },
+//   { path: "#wave2" },
+//   { repeat: 999, duration: 2000, yoyo: true }
+// );
+// wave.start();
