@@ -122,15 +122,6 @@
 /* skill */
 
 /* Animated Bubbles */
-.ocean-bg::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 150px;
-  bottom: 0;
-  background: url("https://i.imgur.com/RJ2H7A1.png") repeat-x;
-  animation: wave 6s linear infinite;
-}
 
 /* Skill Card - Bubbly Effect */
 .skill-card {
