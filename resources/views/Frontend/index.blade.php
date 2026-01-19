@@ -1,98 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('Frontend.Layouts.main')
 
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Index - iPortfolio Bootstrap Template</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
-    <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
-    <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
-
-    <!-- =======================================================
-  * Template Name: iPortfolio
-  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-  * Updated: Jun 29 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-</head>
-
-<body class="index-page">
-
-    <header id="header" class="header dark-background d-flex flex-column">
-        <i class="header-toggle d-xl-none bi bi-list"></i>
-
-        <div class="profile-img">
-            <img src="assets/img/my-profile.jpeg" alt="" class="img-fluid rounded-circle">
-        </div>
-
-        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <!-- <img src="assets/img/logo.png" alt=""> -->
-            <h1 class="sitename">Yas</h1>
-        </a>
-
-        <div class="social-links text-center">
-            <a href="https://www.facebook.com/Chilled.weirdo" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.instagram.com/yas_shrestha/" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://github.com/Yas-shrestha" class="google-plus"><i class="bi bi-github"></i></a>
-            <a href="https://www.linkedin.com/in/yas-shrestha-a69342263/" class="linkedin"><i
-                    class="bi bi-linkedin"></i></a>
-        </div>
-
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
-                <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
-                <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
-                <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
-                <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
-                {{-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span>
-                        <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                        <li><a href="#">Dropdown 1</a></li>
-                        <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
-                                    class="bi bi-chevron-down toggle-dropdown"></i></a>
-                            <ul>
-                                <li><a href="#">Deep Dropdown 1</a></li>
-                                <li><a href="#">Deep Dropdown 2</a></li>
-                                <li><a href="#">Deep Dropdown 3</a></li>
-                                <li><a href="#">Deep Dropdown 4</a></li>
-                                <li><a href="#">Deep Dropdown 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Dropdown 2</a></li>
-                        <li><a href="#">Dropdown 3</a></li>
-                        <li><a href="#">Dropdown 4</a></li>
-                    </ul>
-                </li> --}}
-                <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
+@section('section')
     <main class="main">
 
         <!-- Hero Section -->
@@ -209,8 +117,8 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="stats-item">
                                 <i class="bi bi-emoji-smile"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="5"
-                                    data-purecounter-duration="1" class="purecounter"></span>
+                                <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                                    class="purecounter"></span>
                                 <p><strong>Happy Clients</strong> <span>Personal Mentor for Project</span></p>
                             </div>
                         </div><!-- End Stats Item -->
@@ -218,18 +126,22 @@
                         <div class="col-lg-4 col-md-6">
                             <div class="stats-item">
                                 <i class="bi bi-journal-richtext"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="8"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p><strong>Projects</strong> <span>Projects </span></p>
+                                <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p><strong>10+ Projects</strong> <span> Dynamic personal projects and project that was
+                                        tweaked for new feature</span></p>
                             </div>
                         </div><!-- End Stats Item -->
 
                         <div class="col-lg-4 col-md-6">
                             <div class="stats-item">
                                 <i class="bi bi-headset"></i>
-                                <span data-purecounter-start="0" data-purecounter-end="24"
-                                    data-purecounter-duration="1" class="purecounter"></span>
-                                <p><strong>Hours Of Support</strong> <span>Support available 24/7</span></p>
+                                <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                                    class="purecounter"></span>
+                                <p><strong>2+ year of Experience</strong> <br>
+                                    <span>2+ year of teaching and mentoring laravel
+                                        intern experience</span>
+                                </p>
                             </div>
                         </div><!-- End Stats Item -->
 
@@ -259,24 +171,24 @@
                             <div class="progress">
                                 <span class="skill"><span>HTML</span> <i class="val">100%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="100"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
                             <div class="progress">
                                 <span class="skill"><span>CSS</span> <i class="val">80%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
                             <div class="progress">
                                 <span class="skill"><span>JavaScript</span> <i class="val">60%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
@@ -287,24 +199,24 @@
                             <div class="progress">
                                 <span class="skill"><span>PHP</span> <i class="val">60%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
                             <div class="progress">
                                 <span class="skill"><span>WordPress/CMS</span> <i class="val">60%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
                             <div class="progress">
                                 <span class="skill"><span>Laravel</span> <i class="val">60%</i></span>
                                 <div class="progress-bar-wrap">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="60"
-                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                        aria-valuemax="100"></div>
                                 </div>
                             </div><!-- End Skills Item -->
 
@@ -479,8 +391,8 @@
                                         <h4>Branding 1</h4>
                                         <p>Lorem ipsum, dolor sit amet consectetur</p>
                                         <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1"
-                                            data-gallery="portfolio-gallery-branding"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                            data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                                class="bi bi-zoom-in"></i></a>
                                         <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
@@ -539,8 +451,8 @@
                                         <h4>Branding 2</h4>
                                         <p>Lorem ipsum, dolor sit amet consectetur</p>
                                         <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
-                                            data-gallery="portfolio-gallery-branding"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                            data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                                class="bi bi-zoom-in"></i></a>
                                         <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
@@ -599,8 +511,8 @@
                                         <h4>Branding 3</h4>
                                         <p>Lorem ipsum, dolor sit amet consectetur</p>
                                         <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
-                                            data-gallery="portfolio-gallery-branding"
-                                            class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                            data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                                                class="bi bi-zoom-in"></i></a>
                                         <a href="portfolio-details.html" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
@@ -873,36 +785,41 @@
                                     <i class="bi bi-geo-alt flex-shrink-0"></i>
                                     <div>
                                         <h3>Address</h3>
-                                        <p>A108 Adam Street, New York, NY 535022</p>
+                                        <p>Pokhara-19 ,Lamachaur , Nepal</p>
                                     </div>
                                 </div><!-- End Info Item -->
 
-                                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                                <a href="tel:+9779806630977" class="info-item d-flex" data-aos="fade-up"
+                                    data-aos-delay="300" aria-label="Call +977 9806630977">
+
                                     <i class="bi bi-telephone flex-shrink-0"></i>
                                     <div>
-                                        <h3>Call Us</h3>
-                                        <p>+1 5589 55488 55</p>
+                                        <h3>Call Me</h3>
+                                        +977 980 663 0977
                                     </div>
-                                </div><!-- End Info Item -->
+                                </a>
+                                <a href="mailto:yasshrestha1@gmail.com" class="info-item d-flex" data-aos="fade-up"
+                                    data-aos-delay="400">
 
-                                <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
                                     <i class="bi bi-envelope flex-shrink-0"></i>
                                     <div>
                                         <h3>Email Us</h3>
-                                        <p>info@example.com</p>
+                                        yasshrestha1@gmail.com
                                     </div>
-                                </div><!-- End Info Item -->
+                                </a>
 
                                 <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112488.41424431597!2d83.87421648336729!3d28.22969770585795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3995937bbf0376ff%3A0xf6cf823b25802164!2sPokhara!5e0!3m2!1sen!2snp!4v1768838781139!5m2!1sen!2snp"
                                     frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen=""
                                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
                             </div>
                         </div>
 
                         <div class="col-lg-7">
-                            <form action="forms/contact.php" method="post" class="php-email-form"
-                                data-aos="fade-up" data-aos-delay="200">
+                            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                                data-aos-delay="200">
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
@@ -948,47 +865,4 @@
 
         </div>
     </main>
-
-    <footer id="footer" class="footer position-relative light-background">
-
-        <div class="container">
-            <div class="copyright text-center ">
-                <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
-                        Reserved</span></p>
-            </div>
-            <div class="credits">
-                <!-- All the links in the footer should remain intact. -->
-                <!-- You can delete the links only if you've purchased the pro version. -->
-                <!-- Licensing information: https://bootstrapmade.com/license/ -->
-                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-            </div>
-        </div>
-
-    </footer>
-
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
-
-    <!-- Preloader -->
-    <div id="preloader"></div>
-
-    <!-- Vendor JS Files -->
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
-    <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
-    <script src="{{ asset('assets/vendor/typed.js/typed.umd.js') }}"></script>
-    <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
-    <script src="{{ asset('assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
-    <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
-    <script src="{{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
-
-    <!-- Main JS File -->
-    <script src="{{ asset('assets/js/main.js') }}"></script>
-
-</body>
-
-</html>
+@endsection
