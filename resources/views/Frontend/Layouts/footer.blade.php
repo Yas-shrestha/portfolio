@@ -2,7 +2,7 @@
 
     <div class="container">
         <div class="copyright text-center ">
-            <p>© <span>Copyright</span> <strong class="px-1 sitename">iPortfolio</strong> <span>All Rights
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">Yas Shrestha</strong> <span>All Rights
                     Reserved</span></p>
         </div>
         <div class="credits">
@@ -10,7 +10,7 @@
             <!-- You can delete the links only if you've purchased the pro version. -->
             <!-- Licensing information: https://bootstrapmade.com/license/ -->
             <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            Designed by <a href="https://www.linkedin.com/in/yas-shrestha-a69342263/">Yas Shrestha</a>
         </div>
     </div>
 

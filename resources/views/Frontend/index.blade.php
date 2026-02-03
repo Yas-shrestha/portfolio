@@ -385,7 +385,7 @@
                                         <a href="assets/img/portfolio/app-1.jpg" title="App 1"
                                             data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -400,7 +400,7 @@
                                         <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
                                             data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@
                                         <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1"
                                             data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -430,7 +430,7 @@
                                         <a href="assets/img/portfolio/books-1.jpg" title="Branding 1"
                                             data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -445,7 +445,7 @@
                                         <a href="assets/img/portfolio/app-2.jpg" title="App 2"
                                             data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -460,7 +460,7 @@
                                         <a href="assets/img/portfolio/product-2.jpg" title="Product 2"
                                             data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -475,7 +475,7 @@
                                         <a href="assets/img/portfolio/branding-2.jpg" title="Branding 2"
                                             data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -490,7 +490,7 @@
                                         <a href="assets/img/portfolio/books-2.jpg" title="Branding 2"
                                             data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -505,7 +505,7 @@
                                         <a href="assets/img/portfolio/app-3.jpg" title="App 3"
                                             data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -520,7 +520,7 @@
                                         <a href="assets/img/portfolio/product-3.jpg" title="Product 3"
                                             data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -535,7 +535,7 @@
                                         <a href="assets/img/portfolio/branding-3.jpg" title="Branding 2"
                                             data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -550,7 +550,7 @@
                                         <a href="assets/img/portfolio/books-3.jpg" title="Branding 3"
                                             data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i
                                                 class="bi bi-zoom-in"></i></a>
-                                        <a href="portfolio-details.html" title="More Details" class="details-link"><i
+                                        <a href="/portfolio-detail" title="More Details" class="details-link"><i
                                                 class="bi bi-link-45deg"></i></a>
                                     </div>
                                 </div>
@@ -584,7 +584,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
                             <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Lorem
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Lorem
                                         Ipsum</a>
                                 </h4>
                                 <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas
@@ -597,7 +597,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
                             <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Dolor
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Dolor
                                         Sitema</a>
                                 </h4>
                                 <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -608,7 +608,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
                             <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Sed ut
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Sed ut
                                         perspiciatis</a></h4>
                                 <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
                                     cillum dolore eu fugiat nulla pariatur</p>
@@ -618,7 +618,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
                             <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Magni
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Magni
                                         Dolores</a></h4>
                                 <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa
                                     qui
@@ -629,7 +629,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
                             <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Nemo
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Nemo
                                         Enim</a>
                                 </h4>
                                 <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
@@ -640,7 +640,7 @@
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
                             <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
                             <div>
-                                <h4 class="title"><a href="service-details.html" class="stretched-link">Eiusmod
+                                <h4 class="title"><a href="/service-detail" class="stretched-link">Eiusmod
                                         Tempor</a></h4>
                                 <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam
                                     libero
@@ -653,7 +653,7 @@
                 </div>
 
             </section><!-- /Services Section -->
-
+            {{-- 
             <!-- Testimonials Section -->
             <section id="testimonials" class="testimonials section light-background">
 
@@ -785,7 +785,7 @@
 
                 </div>
 
-            </section><!-- /Testimonials Section -->
+            </section><!-- /Testimonials Section --> --}}
 
             <!-- Contact Section -->
             <section id="contact" class="contact section">
@@ -840,8 +840,9 @@
                         </div>
 
                         <div class="col-lg-7">
-                            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+                            <form id="contactForm" method="post" class="form p-3  shadow" data-aos="fade-up"
                                 data-aos-delay="200">
+                                @csrf
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
@@ -868,11 +869,10 @@
                                     </div>
 
                                     <div class="col-md-12 text-center">
-                                        <div class="loading">Loading</div>
-                                        <div class="error-message"></div>
-                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                        <div class="sent-message mb-4 bg-success" id="formMessage">
+                                        </div>
 
-                                        <button type="submit">Send Message</button>
+                                        <button type="submit" class="btn btn-primary">Send Message</button>
                                     </div>
 
                                 </div>
@@ -887,4 +887,29 @@
 
         </div>
     </main>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const form = e.target
+            const formData = new FormData(form);
+
+
+            const response = await fetch('/api/contact/store', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('formMessage').innerText = data.message;
+                form.reset();
+            } else {
+                // validation errors
+                document.getElementById('formMessage').innerText = 'Something went wrong';
+                console.log(data.errors);
+            }
+        })
+    </script>
 @endsection
