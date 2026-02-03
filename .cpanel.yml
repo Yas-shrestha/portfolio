@@ -1,0 +1,25 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/yas/public_html
+
+    # Copy Laravel core folders
+    - /bin/cp -R app $DEPLOYPATH
+    - /bin/cp -R bootstrap $DEPLOYPATH
+    - /bin/cp -R config $DEPLOYPATH
+    - /bin/cp -R database $DEPLOYPATH
+    - /bin/cp -R resources $DEPLOYPATH
+    - /bin/cp -R routes $DEPLOYPATH
+
+    # Copy public assets INTO public_html (this is your web root)
+    - /bin/cp -R public/* $DEPLOYPATH
+
+    # Copy Laravel files
+    - /bin/cp artisan $DEPLOYPATH
+    - /bin/cp composer.json $DEPLOYPATH
+    - /bin/cp composer.lock $DEPLOYPATH
+
+    # Only copy vendor if it exists in repo
+    - /bin/cp -R vendor $DEPLOYPATH || echo "No vendor folder"
+
+    # DO NOT touch .env on server
