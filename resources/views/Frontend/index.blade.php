@@ -334,8 +334,8 @@
                                             target="_blank">nepalesetrekking.com</a>
                                         )</em></p>
                                 <ul>
-                                    <li>Provided project oversight for a live WordPress website developed by a team of
-                                        interns.</li>
+                                    <li>Provided project oversight for a live Laravel website developed by a team of
+                                        interns using Laravel and Tailwind</li>
                                     <li>Reviewed progress, assisted in debugging issues, and ensured proper functionality
                                         before and after launch.</li>
                                     <li>Supported hosting setup and deployment to make the site publicly accessible.</li>
@@ -869,8 +869,7 @@
                                     </div>
 
                                     <div class="col-md-12 text-center">
-                                        <div class="sent-message mb-4 bg-success" id="formMessage">
-                                        </div>
+                                        <div id="formMessage" class="mb-4" style="display:none;"></div>
 
                                         <button type="submit" class="btn btn-primary">Send Message</button>
                                     </div>
@@ -888,28 +887,111 @@
         </div>
     </main>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const form = e.target
-            const formData = new FormData(form);
+        const form = document.getElementById('contactForm');
+        const msgBox = document.getElementById('formMessage');
 
+        let hideTimer = null;
 
-            const response = await fetch('/api/contact/store', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
-            const data = await response.json();
-            if (response.ok) {
-                document.getElementById('formMessage').innerText = data.message;
-                form.reset();
-            } else {
-                // validation errors
-                document.getElementById('formMessage').innerText = 'Something went wrong';
-                console.log(data.errors);
+        function showMessage(type, message, errors = []) {
+            // type: "success" | "error"
+            if (hideTimer) clearTimeout(hideTimer);
+
+            const isSuccess = type === 'success';
+
+            // Keep styling simple and compatible with your template
+            msgBox.style.display = 'block';
+            msgBox.className = 'mb-4 p-3 rounded ' + (isSuccess ? 'bg-success text-white' : 'bg-danger text-white');
+
+            // Build message HTML
+            let html = `<div>${message}</div>`;
+
+            if (errors.length) {
+                html += `<ul class="mt-2 mb-0 ps-3">`;
+                errors.forEach(err => {
+                    html += `<li>${err}</li>`;
+                });
+                html += `</ul>`;
             }
-        })
+
+            msgBox.innerHTML = html;
+
+            // auto hide
+            hideTimer = setTimeout(() => {
+                msgBox.style.display = 'none';
+                msgBox.innerHTML = '';
+            }, 5000);
+        }
+
+        function collectErrors(errorObj) {
+            // Laravel validation returns: { field: ["msg1","msg2"], ... }
+            if (!errorObj || typeof errorObj !== 'object') return [];
+            return Object.values(errorObj).flat().filter(Boolean);
+        }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const oldBtnText = submitBtn ? submitBtn.innerText : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Sending...';
+            }
+
+            // Clear old message
+            msgBox.style.display = 'none';
+            msgBox.innerHTML = '';
+
+            try {
+                const formData = new FormData(form);
+
+                const response = await fetch('/api/contact/store', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                // Sometimes server returns HTML on error; read safely
+                const rawText = await response.text();
+                let data = {};
+                try {
+                    data = JSON.parse(rawText);
+                } catch (err) {
+                    data = {
+                        raw: rawText
+                    };
+                }
+
+                if (response.ok) {
+                    showMessage('success', data.message || 'Message sent successfully!');
+                    form.reset();
+                    return;
+                }
+
+                // Handle Laravel validation errors
+                if (response.status === 422) {
+                    const errs = collectErrors(data.errors);
+                    showMessage('error', 'Please fix the errors below:', errs.length ? errs : [
+                        'Invalid input.']);
+                    return;
+                }
+
+                // Other errors (500, 404, etc.)
+                showMessage('error', data.message || 'Something went wrong. Please try again.');
+                console.log('Error response:', data);
+
+            } catch (err) {
+                showMessage('error', 'Network error. Please check your connection and try again.');
+                console.error(err);
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = oldBtnText || 'Send Message';
+                }
+            }
+        });
     </script>
+
 @endsection
