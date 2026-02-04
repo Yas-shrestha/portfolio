@@ -57,7 +57,7 @@
                     <!-- Footer -->
                     <tr>
                         <td style="background:#f3f4f6; padding:15px; text-align:center; font-size:12px; color:#888;">
-                            © {{ date('Y') }} Your Website. All rights reserved.
+                            © {{ date('Y') }} <a href="https://yas.com.np">Website</a>. All rights reserved.
                         </td>
                     </tr>
 
