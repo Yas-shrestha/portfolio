@@ -31,8 +31,8 @@ Route::middleware('auth')->group(function () {
         ->name('contacts.destroy');
 });
 Route::middleware(['auth', 'verified', 'role:admin'])->group(function () {
-    Route::resource('project', ProjectController::class);
-    Route::resource('service', ServicesController::class);
+    Route::resource('projects', ProjectController::class)->scoped(['project' => 'slug']);
+    Route::resource('services', ServicesController::class);
 });
 
 require __DIR__ . '/auth.php';

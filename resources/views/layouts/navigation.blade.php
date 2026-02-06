@@ -16,10 +16,10 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                     @if (Auth()->user()->role == 'admin')
-                        <x-nav-link :href="route('project.index')" :active="request()->routeIs('projects')">
+                        <x-nav-link :href="route('projects.index')" :active="request()->routeIs('projects')">
                             {{ __('Projects') }}
                         </x-nav-link>
-                        <x-nav-link :href="route('service.index')" :active="request()->routeIs('services')">
+                        <x-nav-link :href="route('services.index')" :active="request()->routeIs('services')">
                             {{ __('Services') }}
                         </x-nav-link>
                     @endif

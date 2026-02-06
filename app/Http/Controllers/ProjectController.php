@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class ProjectController extends Controller
 {
@@ -12,7 +13,8 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        //
+        $projects = Project::query()->paginate(4);
+        return view('Backend.Project.index', compact('projects'));
     }
 
     /**
@@ -20,7 +22,7 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        //
+        return view('Backend.Project.create');
     }
 
     /**
@@ -28,7 +30,25 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'title'        => ['required', 'string', 'max:255'],
+            'slug'         => ['nullable', 'string', 'max:255', 'unique:projects,slug'],
+            'category'     => ['nullable', 'string', 'max:255'],
+            'client'       => ['nullable', 'string', 'max:255'],
+            'project_date' => ['nullable', 'date'],
+            'project_url'  => ['nullable', 'url'],
+            'description'  => ['nullable', 'string'],
+        ]);
+
+        // Auto-generate slug if not provided
+        $validated['slug'] = $validated['slug']
+            ?? Str::slug($validated['title']);
+
+        Project::create($validated);
+
+        return redirect()
+            ->route('projects.index')
+            ->with('success', 'Project created successfully.');
     }
 
     /**
@@ -36,7 +56,7 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        //
+        return view('Backend.Project.view');
     }
 
     /**
@@ -44,7 +64,7 @@ class ProjectController extends Controller
      */
     public function edit(Project $project)
     {
-        //
+        return view('Backend.Project.edit');
     }
 
     /**
