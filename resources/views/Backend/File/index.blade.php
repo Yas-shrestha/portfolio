@@ -49,8 +49,13 @@
                                                 <tr class="hover:bg-gray-50">
                                                     <td class="px-4 py-3 text-sm font-medium text-gray-900">
                                                         {{ $file->title }}</td>
-                                                    <td class="px-4 py-3 text-sm text-gray-700"><img
-                                                            src="{{ $file->img }}" alt="">
+                                                    <td class="px-4 py-3 text-sm text-gray-700">
+                                                        <div class="flex flex-wrap gap-1">
+                                                            @foreach ($file->file_name ?? [] as $path)
+                                                                <img src="{{ Storage::url($path) }}"
+                                                                    class="w-10 h-10 object-cover rounded" />
+                                                            @endforeach
+                                                        </div>
                                                     </td>
 
                                                     <td class="px-4 py-3 text-sm text-gray-700">

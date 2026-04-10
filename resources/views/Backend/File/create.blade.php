@@ -16,7 +16,8 @@
         <div class="mx-auto max-w-4xl sm:px-6 lg:px-8">
             <div class="bg-white shadow-sm sm:rounded-lg">
                 <div class="p-6">
-                    <form method="POST" action="{{ route('files.store') }}" class="space-y-6">
+                    <form method="POST" action="{{ route('files.store') }}" class="space-y-6"
+                        enctype="multipart/form-data">
                         @csrf
 
                         {{-- Title --}}
@@ -36,13 +37,12 @@
                                 <x-input-error class="mt-2" :messages="$errors->get('images')" />
 
                                 <!-- Preview Grid -->
-                                <div id="imagePreviewContainer" class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4">
-                                </div>
+                                <div id="imagePreviewContainer" class="mt-4 flex flex-wrap gap-2"> </div>
                             </div>
                             <x-input-error class="mt-2" :messages="$errors->get('img')" />
                         </div>
 
-                        <div id="imagePreviewContainer" class="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+                        <div id="imagePreviewContainer" class="mt-4 flex flex-wrap gap-2"></div>
 
 
 
@@ -86,26 +86,22 @@
 
                     reader.onload = function(e) {
                         const div = document.createElement('div');
-                        div.className = 'relative group';
+                        div.style.cssText = 'position:relative;width:64px;height:64px;flex-shrink:0;';
                         div.innerHTML = `
-                    <img src="${e.target.result}" alt="Preview ${index + 1}" 
-                         class="w-full h-32 object-cover rounded-lg shadow-md" />
-                    <button 
+                    <img src="${e.target.result}" alt="Preview ${index + 1}"
+                         style="width:64px;height:64px;object-fit:cover;border-radius:6px;border:1px solid #e5e7eb;" />
+                    <button
                         type="button"
                         onclick="removeImage(${index})"
-                        class="absolute top-2 right-2 bg-red-500 text-white rounded-full p-1.5 
-                               opacity-0 group-hover:opacity-100 transition-opacity hover:bg-red-600"
+                        style="position:absolute;top:-6px;right:-6px;width:18px;height:18px;border-radius:50%;background:#e24b4a;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;padding:0;"
                     >
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L9 9M9 1L1 9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
                         </svg>
                     </button>
-                    <div class="absolute bottom-2 left-2 bg-black bg-opacity-50 text-white text-xs px-2 py-1 rounded">
-                        ${index + 1}
-                    </div>
                 `;
                         container.appendChild(div);
-                    }
+                    };
 
                     reader.readAsDataURL(file);
                 }

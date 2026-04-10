@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class File extends Model
 {
-    //
+    protected $fillable = ['title', 'file_name'];
+    protected $casts = [
+        'file_name' => 'array',
+    ];
 }

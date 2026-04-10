@@ -72,7 +72,25 @@ class ProjectController extends Controller
      */
     public function update(Request $request, Project $project)
     {
-        //
+        $validated = $request->validate([
+            'title'        => ['required', 'string', 'max:255'],
+            'slug'         => ['nullable', 'string', 'max:255', 'unique:projects,slug'],
+            'category'     => ['nullable', 'string', 'max:255'],
+            'client'       => ['nullable', 'string', 'max:255'],
+            'project_date' => ['nullable', 'date'],
+            'project_url'  => ['nullable', 'url'],
+            'description'  => ['nullable', 'string'],
+        ]);
+
+        // Auto-generate slug if not provided
+        $validated['slug'] = $validated['slug']
+            ?? Str::slug($validated['title']);
+
+        $project->update($validated);
+
+        return redirect()
+            ->route('projects.index')
+            ->with('success', 'Project updated successfully.');
     }
 
     /**
@@ -80,6 +98,10 @@ class ProjectController extends Controller
      */
     public function destroy(Project $project)
     {
-        //
+        $project->delete();
+
+        return redirect()
+            ->route('projects.index')
+            ->with('success', 'Project deleted successfully.');
     }
 }
