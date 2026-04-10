@@ -37,7 +37,7 @@ class ProjectController extends Controller
 
         $project = Project::create([
             'title'        => $request->title,
-            'slug'         => $request->slug ?? Str::slug($request->title),
+            'slug'         => Str::slug($request->slug) ?? Str::slug($request->title),
             'client'       => $request->client,
             'project_date' => $request->project_date,
             'project_url'  => $request->project_url,
@@ -84,7 +84,7 @@ class ProjectController extends Controller
 
         $project->update([
             'title'        => $request->title,
-            'slug'         => $request->slug ?? Str::slug($request->title),
+            'slug'         => Str::slug($request->slug) ?? Str::slug($request->title),
             'client'       => $request->client,
             'project_date' => $request->project_date,
             'project_url'  => $request->project_url,

@@ -29,9 +29,7 @@
                                                 <th
                                                     class="px-4 py-3 text-center text-xs font-semibold uppercase text-gray-600">
                                                     Title</th>
-                                                <th
-                                                    class="px-4 py-3 text-center text-xs font-semibold uppercase text-gray-600">
-                                                    Category</th>
+
 
                                                 <th
                                                     class="px-4 py-3 text-center text-xs font-semibold uppercase text-gray-600">
@@ -49,8 +47,6 @@
                                                 <tr class="hover:bg-gray-50">
                                                     <td class="px-4 py-3 text-sm font-medium text-gray-900">
                                                         {{ $project->title }}</td>
-                                                    <td class="px-4 py-3 text-sm text-gray-700">{{ $project->category }}
-                                                    </td>
 
                                                     <td class="px-4 py-3 text-sm text-gray-700">
                                                         {{ $project->project_url }}

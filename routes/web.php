@@ -3,18 +3,17 @@
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FileController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServicesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('Frontend.index');
-});
 
-Route::get('/portfolio-detail', function () {
-    return view('Frontend.portfolio-details');
-});
+route::get('/', [FrontendController::class, 'index'])->name('home');
+
+Route::get('/portfolio-detail/{slug}', [FrontendController::class, 'projectDetail'])->name('project.show');
+
 
 Route::get('/dashboard', DashboardController::class)
     ->middleware(['auth', 'verified'])
