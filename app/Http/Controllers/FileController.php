@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class FileController extends Controller
 {
@@ -36,8 +37,25 @@ class FileController extends Controller
         ]);
 
         foreach ($request->file('images') as $image) {
+            $originalName = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
+            $extension    = $image->getClientOriginalExtension();
+
+            $slug      = Str::slug($originalName);
+            $uniqueNum = random_int(1000, 9999);
+            $title     = $slug . '-' . $uniqueNum;
+
+            // Ensure title uniqueness
+            while (File::where('title', $title)->exists()) {
+                $uniqueNum = random_int(1000, 9999);
+                $title     = $slug . '-' . $uniqueNum;
+            }
+
+            $fileName = $title . '.' . $extension;
+            $image->storeAs('files', $fileName, 'public');
+
             File::create([
-                'file_name' => $image->store('files', 'public')
+                'file_name' => 'files/' . $fileName,
+                'title'     => $title,
             ]);
         }
 
@@ -49,58 +67,27 @@ class FileController extends Controller
      */
     public function show(File $file)
     {
-        return view('Backend.File.show', compact('file'));
+        return view('Backend.File.view', compact('file'));
     }
 
-    public function edit(File $file)
-    {
-        return view('Backend.File.edit', compact('file'));
-    }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, File $file)
-    {
-        $request->validate([
-            'title'    => 'required|string|max:255',
-            'images'   => 'nullable|array',
-            'images.*' => 'image|mimes:jpeg,png,jpg,gif,webp|max:2048',
-        ]);
-
-        $existingPaths = json_decode($file->images, true) ?? [];
-
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $originalName = $image->getClientOriginalName();
-
-                // Check if a file with the same name already exists in this record
-                $isDuplicate = collect($existingPaths)->contains(function ($path) use ($originalName) {
-                    return basename($path) === $originalName;
-                });
-
-                if (!$isDuplicate) {
-                    $existingPaths[] = $image->store('files', 'public');
-                }
-            }
-        }
-
-        $file->update([
-            'title'  => $request->title,
-            'file_name' => json_encode($existingPaths),
-        ]);
-
-        return redirect()->route('files.index')->with('success', 'File updated successfully.');
-    }
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(File $file)
     {
-        Storage::disk('public')->delete($file->file_name);
+        $path = $file->file_name;
+        if (Storage::disk('public')->exists($path)) {
+            Storage::disk('public')->delete($path);
+        }
+
         $file->delete();
 
-        return redirect()->route('files.index')->with('success', 'Deleted.');
+        return redirect()->route('files.index')->with('success', 'File deleted.');
     }
 }

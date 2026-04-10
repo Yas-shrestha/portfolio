@@ -56,7 +56,7 @@
                                         <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May
                                                 2003</span></li>
                                         <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong>
-                                            <span>www.OnProgress.com</span>
+                                            <span>www.yas.com.np</span>
                                         </li>
                                         <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+977
                                                 9806630977</span></li>
@@ -370,82 +370,78 @@
 
             </section><!-- /Portfolio Section -->
 
-            {{-- ══════════════════════════════════════════════════
-             SERVICES SECTION
-        ══════════════════════════════════════════════════ --}}
             <section id="services" class="services section">
 
                 <div class="container section-title reveal" data-aos="fade-up">
                     <h2>Services</h2>
-                    <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-                        consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-                        fugiat sit in iste officiis commodi quidem hic quas.</p>
+                    <p>Here's what I can do for you — from building web applications to mentoring your team through
+                        real-world development.</p>
                 </div>
 
                 <div class="container">
                     <div class="row gy-4">
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
-                            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-code-slash"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Lorem Ipsum</a></h4>
-                                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias
-                                    excepturi sint occaecati cupiditate non provident</p>
+                                <h4 class="title text-white">Laravel Web Development</h4>
+                                <p class="description">Building clean, reliable web applications using Laravel and PHP —
+                                    from simple CRUD systems to multi-role platforms with authentication and database-driven
+                                    features.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-server"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Dolor Sitema</a></h4>
-                                <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                                    aliquip ex ea commodo consequat tarad limino ata</p>
+                                <h4 class="title text-white">Server & Hosting Management</h4>
+                                <p class="description">Setting up and managing hosting environments using WHM and cPanel —
+                                    including deployment, site configuration, and ongoing maintenance.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
-                            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-person-workspace"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Sed ut
-                                        perspiciatis</a></h4>
-                                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur</p>
+                                <h4 class="title text-white">Developer Mentoring</h4>
+                                <p class="description">One-on-one or group mentoring for beginner to intermediate
+                                    developers learning PHP, Laravel, and full stack web development through real project
+                                    work.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-                            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-database"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Magni Dolores</a>
-                                </h4>
-                                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-                                    officia deserunt mollit anim id est laborum</p>
+                                <h4 class="title text-white">Database Design & Management</h4>
+                                <p class="description">Designing and managing MySQL databases — including relationships,
+                                    migrations, and query optimization for Laravel applications.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="500">
-                            <div class="icon flex-shrink-0"><i class="bi bi-brightness-high"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-wordpress"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Nemo Enim</a></h4>
-                                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                                    blanditiis praesentium voluptatum deleniti atque</p>
+                                <h4 class="title text-white">WordPress Development</h4>
+                                <p class="description">Building and customizing WordPress sites — theme tweaks, plugin
+                                    setup, content management, and basic maintenance for small businesses.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                         <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
-                            <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
+                            <div class="icon flex-shrink-0"><i class="bi bi-bug"></i></div>
                             <div>
-                                <h4 class="title"><a href="/service-detail" class="stretched-link">Eiusmod Tempor</a>
-                                </h4>
-                                <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero
-                                    tempore, cum soluta nobis est eligendi</p>
+                                <h4 class="title text-white">Debugging & Technical Support</h4>
+                                <p class="description">Troubleshooting and fixing issues in existing Laravel or PHP
+                                    applications — runtime errors, configuration problems, and performance issues.</p>
                             </div>
-                        </div><!-- End Service Item -->
+                        </div>
 
                     </div>
                 </div>
 
-            </section><!-- /Services Section -->
+            </section>
+            <!-- /Services Section -->
 
             {{--
         <!-- Testimonials Section — kept commented as in original -->
@@ -454,14 +450,11 @@
         </section>
         --}}
 
-            {{-- ══════════════════════════════════════════════════
-             CONTACT SECTION
-        ══════════════════════════════════════════════════ --}}
             <section id="contact" class="contact section">
 
                 <div class="container section-title reveal" data-aos="fade-up">
                     <h2>Contact</h2>
-                    <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+                    <p>Feel Free to contact me or Fill the form if you want to reach me</p>
                 </div>
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -547,4 +540,88 @@
 
         </div>
     </main>
+    <script>
+        const form = document.getElementById('contactForm');
+        const msgBox = document.getElementById('formMessage');
+
+        let hideTimer = null;
+
+        function showMessage(type, message, errors = []) {
+            if (hideTimer) clearTimeout(hideTimer);
+            const isSuccess = type === 'success';
+            msgBox.style.display = 'block';
+            msgBox.className = 'mb-4 p-3 rounded ' + (isSuccess ? 'bg-success text-white' : 'bg-danger text-white');
+            let html = `<div>${message}</div>`;
+            if (errors.length) {
+                html += `<ul class="mt-2 mb-0 ps-3">`;
+                errors.forEach(err => {
+                    html += `<li>${err}</li>`;
+                });
+                html += `</ul>`;
+            }
+            msgBox.innerHTML = html;
+            hideTimer = setTimeout(() => {
+                msgBox.style.display = 'none';
+                msgBox.innerHTML = '';
+            }, 5000);
+        }
+
+        function collectErrors(errorObj) {
+            if (!errorObj || typeof errorObj !== 'object') return [];
+            return Object.values(errorObj).flat().filter(Boolean);
+        }
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const submitBtn = form.querySelector('button[type="submit"]');
+            const oldBtnText = submitBtn ? submitBtn.innerText : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerText = 'Sending...';
+            }
+            msgBox.style.display = 'none';
+            msgBox.innerHTML = '';
+            try {
+                const formData = new FormData(form);
+                const response = await fetch('/api/contact/store', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                const rawText = await response.text();
+                let data = {};
+                try {
+                    data = JSON.parse(rawText);
+                } catch (err) {
+                    data = {
+                        raw: rawText
+                    };
+                }
+                if (response.ok) {
+                    showMessage('success', data.message || 'Message sent successfully!');
+                    form.reset();
+                    return;
+                }
+                if (response.status === 422) {
+                    const errs = collectErrors(data.errors);
+                    showMessage('error', 'Please fix the errors below:', errs.length ? errs : [
+                        'Invalid input.'
+                    ]);
+                    return;
+                }
+                showMessage('error', data.message || 'Something went wrong. Please try again.');
+                console.log('Error response:', data);
+            } catch (err) {
+                showMessage('error', 'Network error. Please check your connection and try again.');
+                console.error(err);
+            } finally {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerText = oldBtnText || 'Send Message';
+                }
+            }
+        });
+    </script>
 @endsection
