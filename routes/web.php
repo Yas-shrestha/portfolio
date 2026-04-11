@@ -14,6 +14,7 @@ route::get('/', [FrontendController::class, 'index'])->name('home');
 
 Route::get('/portfolio-detail/{slug}', [FrontendController::class, 'projectDetail'])->name('project.show');
 
+route::post('/contact/store', [ContactController::class, 'store'])->name('contact.store');
 
 Route::get('/dashboard', DashboardController::class)
     ->middleware(['auth', 'verified'])

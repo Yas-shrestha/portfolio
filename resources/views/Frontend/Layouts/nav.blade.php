@@ -7,7 +7,7 @@
             <img src="assets/img/my-profile.jpeg" alt="" class="img-fluid rounded-circle">
         </div>
 
-        <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+        <a href="{{ route('home') }}" class="logo d-flex align-items-center justify-content-center">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="assets/img/logo.png" alt=""> -->
             <h1 class="sitename">Yas</h1>

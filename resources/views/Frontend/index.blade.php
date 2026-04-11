@@ -503,38 +503,55 @@
                             </div>
                         </div>
 
+
                         <div class="col-lg-7 reveal-right">
-                            <form id="contactForm" method="POST" class="form p-4 shadow" data-aos="fade-up"
-                                data-aos-delay="200">
+                            <form action="{{ route('contact.store') }}" method="POST" class="form p-4 shadow"
+                                data-aos="fade-up" data-aos-delay="200">
                                 @csrf
                                 <div class="row gy-4">
 
                                     <div class="col-md-6">
                                         <label for="name-field" class="pb-2">Your Name</label>
-                                        <input type="text" name="name" id="name-field" class="form-control"
-                                            required="">
+                                        <input type="text" name="name" id="name-field"
+                                            class="form-control @error('name') is-invalid @enderror"
+                                            value="{{ old('name') }}" required>
+                                        @error('name')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-md-6">
                                         <label for="email-field" class="pb-2">Your Email</label>
-                                        <input type="email" class="form-control" name="email" id="email-field"
-                                            required="">
+                                        <input type="email" name="email" id="email-field"
+                                            class="form-control @error('email') is-invalid @enderror"
+                                            value="{{ old('email') }}" required>
+                                        @error('email')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-md-12">
                                         <label for="subject-field" class="pb-2">Subject</label>
-                                        <input type="text" class="form-control" name="subject" id="subject-field"
-                                            required="">
+                                        <input type="text" name="subject" id="subject-field"
+                                            class="form-control @error('subject') is-invalid @enderror"
+                                            value="{{ old('subject') }}" required>
+                                        @error('subject')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-md-12">
                                         <label for="message-field" class="pb-2">Message</label>
-                                        <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                                        <textarea name="message" rows="10" id="message-field"
+                                            class="form-control @error('message') is-invalid @enderror" required>{{ old('message') }}</textarea>
+                                        @error('message')
+                                            <div class="invalid-feedback">{{ $message }}</div>
+                                        @enderror
                                     </div>
 
                                     <div class="col-md-12 text-center">
-                                        <div id="formMessage" class="mb-4" style="display:none;"></div>
-                                        <button type="submit" class="btn btn-primary">Send Message</button>
+                                        <button type="submit" class="btn btn-primary" id="submitBtn">Send
+                                            Message</button>
                                     </div>
 
                                 </div>
@@ -543,11 +560,73 @@
 
                     </div>
                 </div>
+                {{-- Place this anywhere in your layout, before closing </body> --}}
 
+                @if (session('toast_success') || session('toast_error') || $errors->any())
+
+                    @php
+                        $isSuccess = session('toast_success');
+                        $message = session('toast_success') ?? session('toast_error');
+                    @endphp
+
+                    <div class="position-fixed top-0 end-0 p-3"
+                        style="z-index: 1100; min-width: 320px; max-width: 420px;">
+                        <div id="liveToast" class="toast hide border-0 shadow-sm" role="alert" aria-live="assertive"
+                            aria-atomic="true" style="border-radius: 12px; overflow: hidden; width: 100%;">
+
+                            <div class="d-flex align-items-center px-3 py-2"
+                                style="background: {{ $isSuccess ? '#0f5132' : '#842029' }};">
+                                <span class="me-2" style="font-size: 15px;">
+                                    @if ($isSuccess)
+                                        ✓
+                                    @else
+                                        ✗
+                                    @endif
+                                </span>
+                                <strong class="text-white me-auto" style="font-size: 14px;">
+                                    @if ($isSuccess)
+                                        Success
+                                    @else
+                                        Error
+                                    @endif
+                                </strong>
+                                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"
+                                    aria-label="Close" style="font-size: 11px;"></button>
+                            </div>
+
+                            <div class="toast-body py-3 px-3"
+                                style="background: {{ $isSuccess ? '#d1e7dd' : '#f8d7da' }}; color: {{ $isSuccess ? '#0f5132' : '#842029' }}; font-size: 14px;">
+                                @if ($message)
+                                    {{ $message }}
+                                @elseif($errors->any())
+                                    <strong>Please fix the following:</strong>
+                                    <ul class="mb-0 mt-1 ps-3" style="font-size: 13px;">
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                @endif
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var toast = new bootstrap.Toast(document.getElementById('liveToast'), {
+                                delay: 6000,
+                                autohide: true
+                            });
+                            toast.show();
+                        });
+                    </script>
+
+                @endif
             </section><!-- /Contact Section -->
 
         </div>
     </main>
+
     <script>
         const form = document.getElementById('contactForm');
         const msgBox = document.getElementById('formMessage');
@@ -579,57 +658,6 @@
             return Object.values(errorObj).flat().filter(Boolean);
         }
 
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const oldBtnText = submitBtn ? submitBtn.innerText : '';
-            if (submitBtn) {
-                submitBtn.disabled = true;
-                submitBtn.innerText = 'Sending...';
-            }
-            msgBox.style.display = 'none';
-            msgBox.innerHTML = '';
-            try {
-                const formData = new FormData(form);
-                const response = await fetch('/api/contact/store', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
-                const rawText = await response.text();
-                let data = {};
-                try {
-                    data = JSON.parse(rawText);
-                } catch (err) {
-                    data = {
-                        raw: rawText
-                    };
-                }
-                if (response.ok) {
-                    showMessage('success', data.message || 'Message sent successfully!');
-                    form.reset();
-                    return;
-                }
-                if (response.status === 422) {
-                    const errs = collectErrors(data.errors);
-                    showMessage('error', 'Please fix the errors below:', errs.length ? errs : [
-                        'Invalid input.'
-                    ]);
-                    return;
-                }
-                showMessage('error', data.message || 'Something went wrong. Please try again.');
-                console.log('Error response:', data);
-            } catch (err) {
-                showMessage('error', 'Network error. Please check your connection and try again.');
-                console.error(err);
-            } finally {
-                if (submitBtn) {
-                    submitBtn.disabled = false;
-                    submitBtn.innerText = oldBtnText || 'Send Message';
-                }
-            }
-        });
+        ;
     </script>
 @endsection

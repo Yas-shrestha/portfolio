@@ -41,9 +41,9 @@
                                         <tr class="hover:bg-gray-50 transition">
                                             {{-- Thumbnail — click to open lightbox --}}
                                             <td class="px-4 py-3">
-                                                <a href="{{ Storage::url($file->file_name) }}" target="_blank"
+                                                <a href="{{ asset('storage/' . $file->file_name) }}" target="_blank"
                                                     class="block group" title="Open in new tab">
-                                                    <img src="{{ Storage::url($file->file_name) }}"
+                                                    <img src="{{ asset('storage/' . $file->file_name) }}"
                                                         alt="{{ $file->title }}"
                                                         class="w-9 h-9 object-cover rounded-md border border-gray-200 group-hover:opacity-75 transition" />
                                                 </a>
